@@ -24,6 +24,7 @@ class IdeasController < ApplicationController
   # POST /ideas
   # POST /ideas.json
   def create
+    #binding.pry #for debugging purposes, execution stops here
     @idea = Idea.new(idea_params)
 
     respond_to do |format|
