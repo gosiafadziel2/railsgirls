@@ -16,6 +16,7 @@
 
 body {
   padding-top: 100px;
+  background-color: #f2f2f2;
 }
 
 footer {
@@ -33,6 +34,27 @@ th {
 
 a.btn:visited:not(.btn-default) {
   color: #FFF;
+}
+
+nav.navbar {
+  //background: #d3360b;
+  background-image: linear-gradient(to bottom, #d3360b 0%, #ab0000 100%);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFF
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FFF
+}
+
+.navbar-inverse {
+  border: none
+}
+
+img {
+  border-radius: 3%;
 }
 
 @import 'lightbox';

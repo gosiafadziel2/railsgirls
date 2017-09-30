@@ -1,19 +1,26 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <%= image_tag(@idea.picture_url, width: 600, class: "img-responsive") if @idea.picture.present? %>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <p>
+        <strong>Name:</strong>
+        <%= @idea.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @idea.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @idea.description %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
-</p>
-
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+      <p>
+        <strong>Description:</strong>
+        <%= @idea.description %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <br/>
+      <%= link_to 'Edit', edit_idea_path(@idea), class: "btn btn-warning" %>
+      <%= link_to 'Back', ideas_path, class: "btn btn-default" %>
+    </div>
+  </div>
+</div>
