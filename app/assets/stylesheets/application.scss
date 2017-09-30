@@ -30,3 +30,9 @@ table, td, th {
 th {
   border-bottom: 1px solid #DDD;
 }
+
+a.btn:visited:not(.btn-default) {
+  color: #FFF;
+}
+
+@import 'lightbox';

@@ -2,7 +2,7 @@
 
 <h1>Ideas</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -17,10 +17,10 @@
       <tr>
         <td><%= idea.name %></td>
         <td><%= idea.description %></td>
-        <td><%= idea.picture %></td>
-        <td><%= link_to 'Show', idea %></td>
-        <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
-        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a class="example-image-link btn btn-default" href="<%= idea.picture.url %>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">Show picture</a></td>
+        <td><%= link_to 'Show', idea, class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_idea_path(idea), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
